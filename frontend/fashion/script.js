@@ -317,6 +317,26 @@ function syncCartState(items) {
   });
 }
 
+let serviceToastTimer;
+function showServiceToast(message, type = 'success') {
+  let toast = document.getElementById('serviceToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'serviceToast';
+    toast.style.cssText = 'position:fixed;right:22px;bottom:22px;z-index:9999;max-width:min(340px,calc(100vw - 32px));padding:12px 16px;border-radius:8px;background:#16a34a;color:#fff;font-weight:800;box-shadow:0 16px 34px rgba(15,23,42,.24);opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity .24s ease,transform .24s ease;';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = type === 'error' ? message : `☁ ${message}`;
+  toast.style.background = type === 'error' ? '#dc2626' : '#16a34a';
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateY(0)';
+  clearTimeout(serviceToastTimer);
+  serviceToastTimer = setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(18px)';
+  }, 2200);
+}
+
 async function refreshCartFromServer() {
   const email = getCurrentUserEmail();
   if (!email) {
@@ -459,9 +479,10 @@ async function addToCart(id, qty) {
       })
     });
     await refreshCartFromServer();
+    showServiceToast(`${product.name} added to cart`);
     if (window.gsap) gsap.fromTo('#cartCount', { scale: 0.9, opacity: 0.6 }, { scale: 1, opacity: 1, duration: 0.28 });
   } catch (error) {
-    alert(error.message || 'Unable to add item to cart');
+    showServiceToast(error.message || 'Unable to add item to cart', 'error');
   }
 }
 

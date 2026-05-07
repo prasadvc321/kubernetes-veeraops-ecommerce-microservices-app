@@ -614,6 +614,28 @@ body {
     margin-left: 10px;
 }
 
+.queue-source-link {
+    flex-shrink: 0;
+    margin-left: 10px;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.queue-source-link:hover {
+    background: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+.queue-item.active .queue-source-link {
+    background: rgba(0, 0, 0, 0.16);
+    color: var(--bg-dark);
+}
+
 /* Modal Style for the Blocked Message */
 #block-modal div:first-child {
     background:#2c3e50!important;
@@ -656,7 +678,7 @@ body {
         <div class="sidebar">
             <div class="logo">
                 <img src="https://images.genius.com/59a92f849e980e83af49a57ca3167295.1000x1000x1.jpg" alt="Music Player Logo" class="logo-img">
-                <span class="app-title">Google Music</span>
+                <span class="app-title">Akki Narni</span>
             </div>
             <div class="menu">
                 <div class="menu-item active">
@@ -820,17 +842,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: "Let Me Down Slowly x Main Dhoondne Ko Zamaane Mein (Gravero Mashup)", artist: "Gravero", src: "https://intact-fuchsia-tanizit5ua.edgeone.app/Let%20Me%20Down%20Slowly%20x%20Main%20Dhoondne%20Ko%20Zamaane%20Mein%20(Gravero%20Mashup)%20_%20Full%20Version.mp3", cover: "https://i.ytimg.com/vi/wqUFuZyR-xA/maxresdefault.jpg", duration: "3:46" },
         { title: "Sahiba", artist: "Aditya Rikhari", src: "https://smooth-coral-mwcsw6ex3k.edgeone.app/Sahiba_Official_Music_Video_Aditya_Rikhari,_Ankita_Chhetri.mp3", cover: "https://c.saavncdn.com/140/Sahiba-Hindi-2023-20231213191015-500x500.jpg", duration: "3:46" },
         { title: "Ranjheya Ve", artist: "Zain Zohaib", src: "https://secret-amber-2uyqkkfbec.edgeone.app/Ranjheya%20Ve%20%20%20Zain%20Zohaib%20%20%20Yratta%20media.mp3", cover: "https://i.ytimg.com/vi/MVvEUAymQFM/maxresdefault.jpg", duration: "3:46" },
-        { title: "Zaroor x Tere Bina x Ishq Di Baajiyaan", artist: "Diljit Dosanjh", src: "https://lonely-ivory-eia6uw8et2.edgeone.app/ytmp3free.cc_zaroor-x-tere-bina-x-kabhi-use-noor-noor-kehta-hu-full-song-trending-reels-song-mashup-youtubemp3free.org.mp3", cover: "https://i.ytimg.com/vi/bStQwuVibyI/sddefault.jpg", duration: "4:46" },
-        { title: "SoundHelix Song 1", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80", duration: "6:13" },
-        { title: "SoundHelix Song 2", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3", cover: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80", duration: "5:31" },
-        { title: "SoundHelix Song 3", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3", cover: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80", duration: "5:03" },
-        { title: "SoundHelix Song 4", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3", cover: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=800&q=80", duration: "5:30" },
-        { title: "SoundHelix Song 5", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3", cover: "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?auto=format&fit=crop&w=800&q=80", duration: "5:27" },
-        { title: "SoundHelix Song 6", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3", cover: "https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?auto=format&fit=crop&w=800&q=80", duration: "5:09" },
-        { title: "SoundHelix Song 7", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3", cover: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=800&q=80", duration: "6:00" },
-        { title: "SoundHelix Song 8", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3", cover: "https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=800&q=80", duration: "5:18" },
-        { title: "SoundHelix Song 9", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3", cover: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=80", duration: "5:34" },
-        { title: "SoundHelix Song 10", artist: "SoundHelix", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3", cover: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80", duration: "6:10" }
     ];
     
     // --- Player state management ---
@@ -1074,8 +1085,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h4>${song.title}</h4>
                     <p>${song.artist}</p>
                 </div>
+                ${song.sourceUrl ? `<a class="queue-source-link" href="${song.sourceUrl}" target="_blank" rel="noopener" title="Open official YouTube Music source">YT Music</a>` : ""}
                 <div class="queue-item-duration">${displayDuration}</div>
             `;
+            const sourceLink = queueItem.querySelector('.queue-source-link');
+            if (sourceLink) {
+                sourceLink.addEventListener('click', event => event.stopPropagation());
+            }
             
             // Clicking a list item loads the song found at its 'actualIndex' in the main queue
             queueItem.addEventListener('click', () => {
