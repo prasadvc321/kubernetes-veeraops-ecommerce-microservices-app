@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: food
-        image: 891376978717.dkr.ecr.us-east-1.amazonaws.com/shopping-site-food:016048d7af4970669b23af29bbe9f033cd0ec32b
+        image: 767397692469.dkr.ecr.us-east-1.amazonaws.com/shopping-site-food:95466857201d35dc0597235248bc32f38e7a6a85
         ports:
         - containerPort: 80
 ---
